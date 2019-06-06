@@ -1,2 +1,1 @@
-# BRAC
-Scripts for work done at BRAC Uganda
+###Scripts for work done at BRAC Uganda
