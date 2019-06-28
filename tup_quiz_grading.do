@@ -4,14 +4,14 @@ log close _all
 
 /*****************
 Description:
-	 TUP endline enumerator training day 1 Quiz
+	 TUP endline enumerator training Quiz grading
 	 
 *****************/
 
 global USER "Ryan McWay"
 local date `c(current_date)'
 local time `c(current_time)'
-local home "C:\Users\Ryry\Dropbox\Ryan Intern - TUP"
+local home "<local>"
 //***** All paths should be relative so that all you need to change is `home' and $USER in order to run the dofile.
 cd "`home'"
 local input	"`home'\input"
@@ -53,22 +53,22 @@ replace id = 17 if name == "Namatovu Catherine"
 replace id = 18 if name == "Namugoya Susan"
 replace id = 19 if name == "Nevis Bukirwa"
 replace id = 20 if name == "Shamim Nalukenge"
-replace id = 21 if name == "Lydia Namwanza"
-replace id = 22 if name == "Chloe Nakato"
-replace id = 23 if name == "Nalubwama Christine"
-replace id = 24 if name == "Nantume Flavia"
-replace id = 25 if name == "David Baidu"
-replace id = 26 if name == "Apio Florence"
-replace id = 27 if name == "Ahimbisibwe Daisy"
-replace id = 28 if name == "Omiat Samuel"
-replace id = 29 if name == "Shafik Kikomeko"
-replace id = 30 if name == "Nabukeera Winfred"
-replace id = 31 if name == "Juliet Musiime"
-replace id = 32 if name == "Nayiga Sylvia"
+replace id = 21 if name == "Lydia"
+replace id = 22 if name == "Chloe"
+replace id = 23 if name == "Nalubwama"
+replace id = 24 if name == "Nantume"
+replace id = 25 if name == "David"
+replace id = 26 if name == "Apio"
+replace id = 27 if name == "Ahimbisibwe"
+replace id = 28 if name == "Omiat"
+replace id = 29 if name == "Shafik"
+replace id = 30 if name == "Nabukeera"
+replace id = 31 if name == "Juliet"
+replace id = 32 if name == "Nayiga"
 replace id = 33 if name == "Prossie"
-replace id = 34 if name == "Moses Semujju"
-replace id = 35 if name == "Awachango Annette"
-replace id = 36 if name == "Wafula Protus"
+replace id = 34 if name == "Moses"
+replace id = 35 if name == "Awachango"
+replace id = 36 if name == "Wafula"
 duplicates drop id, force
 
 egen score_d2 = rowmean(project q_section2 q_section3 q_section5_acres q_section5 q_section11)
