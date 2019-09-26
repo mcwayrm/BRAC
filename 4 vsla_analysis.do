@@ -17,17 +17,7 @@ Description:
 local date `c(current_date)'
 local time `c(current_time)'
 if "`c(username)'"=="Ryry"  ///
-     local home "C:\Users\Ryry\Dropbox\Ryan_Intern\TUP Data Final"
-	 global USER "Ryan McWay"
-else if "`c(username)'"=="Danish IERC"  ///
-     local home "C:\Users\Danish IERC\Dropbox\Ryan_Intern\TUP Data Final" 
-	 global USER "Danish Us Saleem"
-else if "`c(username)'"=="DELL"  ///
-     local home "C:\Users\DELL\Dropbox\Ryan_Intern\TUP Data Final" 
-	 global USER "Patrick Olobo"
-else if "`c(username)'"=="KGC"  ///
-     local home "C:\Users\KGC\Dropbox\Ryan_Intern\TUP Data Final" 
-	 global USER "Dennis Oundo"
+     local home "<local>"
 //***** All paths should be relative so that all you need to change is `home' and $USER in order to run the dofile.
 cd "`home'"
 local input	"`home'\data"
@@ -42,15 +32,9 @@ display "Analysis run by $USER for TUP clean at `date' and `time'"
 do "`home'\scripts\import_vsla_tup_ug.do"
 
 /*
-	Missing VSLA: Magamaga, Kyasnyi, Kito-WBZ, Kabuwombero, Buyuki
 
-	Godown resp_name == "Wandera Wilson"
-	Dyang resp_name == "Nalule Phiona" 
-	Pocheng resp_name == "Wanchan Alfred"
-	Siriba Central resp_name = "Byansi Fred"
 */
 
-drop if resp_name == "Nyeko Joseph" | resp_name == "Omongole Moses" | resp_name == "Byaruhanga Emmanuel" | resp_name == "Opyem Jinaro" | resp_name == "Kusiima Beatrice" | resp_name == "Nayengo Jida"
 drop formdef* key submission* start end date enumerator branch
 rename (resp_name geocoordinatelatitude geocoordinatelongitude geocoordinatealtitude geocoordinateaccuracy vsla) (vsla_resp_name vsla_geo_lat vsla_geo_long vsla_geo_alt vsla_geo_acc vsla_branch) 
 
