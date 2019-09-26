@@ -18,24 +18,12 @@ Description:
 local date `c(current_date)'
 local time `c(current_time)'
 if "`c(username)'"=="Ryry"  ///
-     local home "C:\Users\Ryry\Dropbox\Ryan_Intern\TUP Data Final"
-	 global USER "Ryan McWay"
-else if "`c(username)'"=="Danish IERC"  ///
-     local home "C:\Users\Danish IERC\Dropbox\Ryan_Intern\TUP Data Final" 
-	 global USER "Danish Us Saleem"
-else if "`c(username)'"=="DELL"  ///
-     local home "C:\Users\DELL\Dropbox\Ryan_Intern\TUP Data Final" 
-	 global USER "Patrick Olobo"
-else if "`c(username)'"=="KGC"  ///
-     local home "C:\Users\KGC\Dropbox\Ryan_Intern\TUP Data Final" 
+     local home "<local>"
 	 global USER "Dennis Oundo"
 //***** All paths should be relative so that all you need to change is `home' and $USER in order to run the dofile.
 cd "`home'"
 local input	"`home'\data"
 local output "`home'\results"
-
-//****************************************************************************
-display "Analysis run by $USER for TUP clean at `date' and `time'"
 
 use "`input'\single\tup_clean.dta", clear
 
