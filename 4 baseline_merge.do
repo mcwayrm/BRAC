@@ -11,7 +11,7 @@ Description:
 global USER "Ryan McWay"
 local date `c(current_date)'
 local time `c(current_time)'
-local home "C:\Users\Ryry\Dropbox\Ryan Intern - SMU\"
+local home "<local>"
 //***** All paths should be relative so that all you need to change is `home' and $USER in order to run the dofile.
 **************************************************************************
 cd "`home'"
