@@ -16,16 +16,16 @@ Description:
 local date `c(current_date)'
 local time `c(current_time)'
 if "`c(username)'"=="Ryry"  ///
-     local home "C:\Users\Ryry\Dropbox\Ryan_Intern\TUP Data Final"
+     local home "<local>"
 	 global USER "Ryan McWay"
 else if "`c(username)'"=="Danish IERC"  ///
-     local home "C:\Users\Danish IERC\Dropbox\Ryan_Intern\TUP Data Final" 
+     local home "<local>" 
 	 global USER "Danish Us Saleem"
 else if "`c(username)'"=="DELL"  ///
-     local home "C:\Users\DELL\Dropbox\Ryan_Intern\TUP Data Final" 
+     local home "<local>" 
 	 global USER "Patrick Olobo"
 else if "`c(username)'"=="KGC"  ///
-     local home "C:\Users\KGC\Dropbox\Ryan_Intern\TUP Data Final" 
+     local home "<local>" 
 	 global USER "Dennis Oundo"
 
 //***** All paths should be relative so that all you need to change is `home' and $USER in order to run the dofile.
@@ -36,17 +36,10 @@ local output "`home'\results"
 //*****************************************************************************
 display "Analysis run by $USER for TUP clean at `date' and `time'"
 
-global output `"C:\Users\DELL\Dropbox\Ryan Intern - TUP\TUP Data Final\"'
-global baseline "`"TUP Baseline Final.dta"'"
-global baseline3cat "`"E:\TUP Paper\baseline3cat_190210_v12.dta"'"
-global baselinetime "`"E:\TUP Paper\tupdatadofile\baseline_clean_v12.dta"'"
-*****************************************************************************************
-*****************************************************************************************
-
 ********************TUP Endline************
-use "E:\dell\Downloads_C+\baseline_data (1).dta" ,clear
+use "<local>" ,clear
 *gen branch1=branch
-*save "E:\dell\Downloads_C+\baseline_data (2).dta" ,replace
+*save "<local>" ,replace
 
 do "E:\TUP endline\tup_endline_ug_stata_template_wide\import_tup_endline_ug.do"
 do "E:\TUP endline\tup_endline_ug_v2_stata_template_wide\import_tup_endline_ug_v2.do"
